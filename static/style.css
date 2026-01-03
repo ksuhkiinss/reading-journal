@@ -1,0 +1,41 @@
+:root {
+    --bg: #faf7f5;
+    --card: #ffffff;
+    --text: #1f1f1f;
+}
+
+.dark {
+    --bg: #1c1c1c;
+    --card: #2a2a2a;
+    --text: #ffffff;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inter, sans-serif;
+    margin: 0;
+}
+
+main {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.theme-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background: var(--card);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}

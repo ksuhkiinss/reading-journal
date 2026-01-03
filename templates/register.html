@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2>Реєстрація</h2>
+
+    <form method="post">
+        <input name="username" placeholder="Імʼя користувача" required><br><br>
+        <input type="password" name="password" placeholder="Пароль" required><br><br>
+        <button type="submit">Зареєструватися</button>
+    </form>
+
+    <p style="margin-top: 15px;">
+        Вже маєш акаунт?
+        <a href="{{ url_for('login') }}">Увійти</a>
+    </p>
+</div>
+{% endblock %}

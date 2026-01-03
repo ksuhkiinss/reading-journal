@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2>📚 Мій щоденник читання</h2>
+
+    <form method="post">
+        <input name="title" placeholder="Назва книги" required><br><br>
+        <input type="number" name="minutes" placeholder="Скільки хвилин читала" required><br><br>
+        <button type="submit">Додати</button>
+    </form>
+
+    <hr>
+
+    <ul>
+        {% for book in books %}
+        <li>
+            <strong>{{ book["title"] }}</strong> — {{ book["minutes"] }} хв, {{ book["date"] }}
+        </li>
+        {% else %}
+        <p>Поки що книг немає 🌱</p>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
